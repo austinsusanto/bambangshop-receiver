@@ -72,7 +72,7 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Create Notification database and Notification repository struct skeleton.`
     -   [x] Commit: `Implement add function in Notification repository.`
     -   [x] Commit: `Implement list_all_as_string function in Notification repository.`
-    -   [ ] Write answers of your learning module's "Reflection Subscriber-1" questions in this README.
+    -   [x] Write answers of your learning module's "Reflection Subscriber-1" questions in this README.
 -   **STAGE 3: Implement services and controllers**
     -   [ ] Commit: `Create Notification service struct skeleton.`
     -   [ ] Commit: `Implement subscribe function in Notification service.`
@@ -92,5 +92,9 @@ This is the place for you to write reflections:
 ### Mandatory (Subscriber) Reflections
 
 #### Reflection Subscriber-1
+
+1. The RwLock<> is used to synchronize the use of Vec of Notifications. This is necessary because the notification value will be accessed by a lot of subscribers at once. The use of RwLock<> also prevents deadlocks and data inconsistency from changing the value. In this case, Mutex<> is not used because it doesn't fit well with the use case where the number of reads is much more than the number of writes.
+
+2. In Rust, a static variable can't be mutable because it will make a problem in multi-threading. By allowing a static variable to be mutable, there will be possibilities where data races, memory corruption, and safety comprimisation happens.
 
 #### Reflection Subscriber-2
