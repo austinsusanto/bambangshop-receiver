@@ -83,7 +83,7 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Implement receive function in Notification controller.`
     -   [x] Commit: `Implement list_messages function in Notification service.`
     -   [x] Commit: `Implement list function in Notification controller.`
-    -   [ ] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
+    -   [x] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
 
 ## Your Reflections
 
@@ -98,3 +98,9 @@ This is the place for you to write reflections:
 2. In Rust, a static variable can't be mutable because it will make a problem in multi-threading. By allowing a static variable to be mutable, there will be possibilities where data races, memory corruption, and safety comprimisation happens.
 
 #### Reflection Subscriber-2
+
+1. Yes, there are some other things that I've explorer about the project outside the tutorial like the src/lib.rs. The lib.rs file contains the configuration of the application. It is actually quite relevant to the part where we configure the .env file and some functions in it is also used in the NotificationService.
+
+2. Spawning more than one instance of Main app has little difference with spawning more than one Receiver app. We only need to open multiple terminal and configure the new observer port to the .env file.
+
+3. No, I haven't tried making a test with Postman due to the lack of time, but I do think that making tests with Postman can be a quite powerful tool to test the functionality of a server from the user's point-of-view. I'll be looking forward to using it for the group project.
